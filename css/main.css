@@ -97,7 +97,7 @@ textarea {
 
 /*Large Background Image*/
 html {
-    background: url(../img/background-mountains-min.jpg) no-repeat center center fixed;
+    background: url(../img/background-mountains.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -109,25 +109,34 @@ body {
     height:100%;
     /* set height to 100% - these are important for allowing content to vertically align */
 }
+
 .wrapper {
     display:flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     justify-content:center;
     align-items:center;
     /* set the display to flex and use the justify-content & align-items properties to center all child elements on the page */
-    margin: 0;
-    height:100%;
+    margin: 10% 0;
     width:100%;
+    height:100%;
 }
 
 #content {
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
     width:85%;
+    height:auto;
     min-width:280px;
     max-width:400px;
-    height:auto;
     background:#222;
     color:#fff;
     font-family:'Source Sans Pro', sans-serif;
@@ -288,6 +297,14 @@ i{
 
 
 @media only screen and (min-width:768px){
+    body{
+        height:100%;
+    }
+    
+    .wrapper{
+        margin:0;
+    }
+
     #content{
         padding:0 30px;
     }
@@ -306,9 +323,16 @@ i{
 }
 
 
+
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
+
+/*@media only screen and (max-width:369px){
+    .wrapper{
+        margin:15% 0;
+    }
+}*/
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
